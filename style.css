@@ -1,0 +1,211 @@
+/* style.css */
+
+/* Corpo geral */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F5F5F0;
+  color: #333;
+}
+
+/* Títulos */
+h1,
+h2,
+h3 {
+  color: #193958;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar li a {
+  color: #193958;
+  font-weight: bold;
+}
+
+.navbar li a:hover {
+  color: #61C7B7;
+  font-weight: bolder;
+}
+
+.card-img-top {
+  height: 130px;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+
+.parceiros {
+  background-color: #f8f9fa;
+  padding: 2rem 0;
+  overflow: hidden;
+  box-shadow: 0 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logos-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.logos-track {
+  display: flex;
+  width: calc(250px * 10);
+  /* 5 logos x2 */
+  animation: scroll 20s linear infinite;
+}
+
+.logos-track img {
+  height: 60px;
+  width: auto;
+  margin: 0 1rem;
+  object-fit: contain;
+}
+
+.logos-container:hover .logos-track {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-33.33%);
+  }
+}
+
+.img-servico {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+
+.img-servico:hover {
+  transform: scale(1.05);
+}
+
+/* Ajuste mobile */
+@media (max-width: 576px) {
+  .img-servico {
+    height: 160px;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #005A6F;
+  color: #fff;
+}
+
+footer a {
+  font-weight: bold;
+  text-decoration: underline;
+  color: #fff;
+  list-style: none;
+}
+
+.redes-sociais a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: white;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.redes-sociais a:hover {
+  transform: scale(1.1);
+}
+
+/* Cores individuais */
+.redes-sociais a.instagram {
+  background: #E4405F;
+}
+
+.redes-sociais a.instagram:hover {
+  background: #C13584;
+}
+
+.redes-sociais a.facebook {
+  background: #1877F2;
+}
+
+.redes-sociais a.facebook:hover {
+  background: #0e5ec3;
+}
+
+.redes-sociais a.youtube {
+  background: #FF0000;
+}
+
+.redes-sociais a.youtube:hover {
+  background: #cc0000;
+}
+
+/* Botão do WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 24px;
+  z-index: 999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+.whatsapp-float:hover {
+  background-color: #20b954;
+}
+
+/* Galeria */
+.galeria img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+  .img-galeria {
+    height: 60%;
+  }
+
+  .img-galeria:hover {
+    transform: none;
+  }
+}
+
+.img-modal {
+  max-width: 95vw;
+  max-height: 85vh;
+  object-fit: contain;
+}
+
+@media (max-width: 576px) {
+  .img-modal {
+    max-width: 100vw;
+    max-height: 100vh;
+  }
+}
